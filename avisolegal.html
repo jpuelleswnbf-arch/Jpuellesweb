@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aviso Legal | JPUELLES TEAM</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="icon" type="image/png" href="LOGO JPUELLES.png">
+    <style>
+        :root {
+            --jp-red: #ff0000;
+            --jp-black: #0a0a0a;
+            --jp-white: #ffffff;
+            --jp-gray: #f4f4f5;
+        }
+        html, body { max-width: 100%; overflow-x: hidden; }
+        body { background-color: var(--jp-white); color: var(--jp-black); font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .heading-black { font-weight: 900; text-transform: uppercase; letter-spacing: -0.05em; }
+        .graffiti-font { font-family: 'Permanent Marker', cursive; }
+        .nav-link { position: relative; transition: color 0.3s; }
+        .nav-link::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -4px; left: 0; background-color: var(--jp-red); transition: width 0.3s; }
+        .nav-link:hover::after { width: 100%; }
+        .footer-avatar { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 2px solid var(--jp-red); margin: 0 auto 1.5rem; }
+        #mobile-menu { display: none; }
+        #mobile-menu.active { display: flex; }
+        ::selection { background-color: #dc2626; color: white; }
+    </style>
+</head>
+<body class="bg-white text-black antialiased overflow-x-hidden min-h-screen flex flex-col font-sans">
+
+    <!-- MENÚ SUPERIOR -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-zinc-200">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="text-2xl font-black italic tracking-tighter uppercase">
+                <span class="text-red-600">JP</span><span class="text-black">UELLES</span>
+            </a>
+            <div class="hidden md:flex gap-8 text-xs font-black uppercase tracking-widest items-center">
+                <a href="index.html" class="nav-link text-black hover:text-red-600">Home</a>
+                <a href="servicios.html" class="nav-link text-black hover:text-red-600">Servicios</a>
+                <a href="team.html" class="nav-link text-black hover:text-red-600">Team</a>
+                <a href="contacto.html" class="nav-link text-black hover:text-red-600">Contacto</a>
+                <a href="empiezagratis.html" class="px-4 py-2 bg-red-600 text-white hover:bg-black transition">Empieza Gratis</a>
+                <img src="LOGO JPUELLES.png" alt="Logo JPUELLES" class="h-8 w-auto logo-img">
+            </div>
+            <button class="md:hidden" id="menu-btn"><i data-lucide="menu"></i></button>
+        </div>
+        <div id="mobile-menu" class="flex-col bg-white border-b border-zinc-200 p-6 gap-4 md:hidden font-bold uppercase text-sm">
+            <a href="index.html">Home</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="team.html">Team</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="empiezagratis.html" class="px-4 py-2 bg-red-600 text-white hover:bg-black transition text-center mt-2">Empieza Gratis</a>
+            <img src="LOGO JPUELLES.png" alt="Logo JPUELLES" class="h-12 w-auto mx-auto mt-4 logo-img">
+        </div>
+    </nav>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="flex-grow pt-20">
+        <header class="py-24 bg-black text-white text-center">
+            <div class="max-w-4xl mx-auto px-6">
+                <h1 class="text-5xl md:text-7xl heading-black italic mb-6">AVISO <span class="text-red-600">LEGAL</span></h1>
+            </div>
+        </header>
+
+        <section class="py-16 bg-white">
+            <div class="max-w-4xl mx-auto px-6 text-zinc-700 space-y-6 text-lg leading-relaxed">
+                <h2 class="text-2xl heading-black text-black">1. Información General</h2>
+                <p>En cumplimiento con el deber de información recogido en el artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y del Comercio Electrónico (LSSI-CE), se reflejan los siguientes datos: la empresa titular de dominio web es JPUELLES TEAM, con correo electrónico de contacto: contacto@jpuellesweb.com.</p>
+                
+                <h2 class="text-2xl heading-black text-black mt-8">2. Usuarios</h2>
+                <p>El acceso y/o uso de este portal atribuye la condición de USUARIO, que acepta, desde dicho acceso y/o uso, las Condiciones Generales de Uso aquí reflejadas.</p>
+
+                <h2 class="text-2xl heading-black text-black mt-8">3. Uso del Portal</h2>
+                <p>La web proporciona acceso a informaciones, servicios, programas o datos en Internet pertenecientes a JPUELLES TEAM. El USUARIO asume la responsabilidad del uso del portal. Dicha responsabilidad se extiende al registro que fuese necesario para acceder a determinados servicios o contenidos.</p>
+
+                <h2 class="text-2xl heading-black text-black mt-8">4. Propiedad Intelectual e Industrial</h2>
+                <p>JPUELLES TEAM por sí o como cesionaria, es titular de todos los derechos de propiedad intelectual e industrial de su página web, así como de los elementos contenidos en la misma (a título enunciativo: imágenes, sonido, audio, vídeo, software o textos; marcas o logotipos, combinaciones de colores, estructura y diseño, etc.). Todos los derechos reservados.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="py-16 bg-zinc-950 border-t border-white/5 text-center px-6 text-white">
+        <img src="https://i.ibb.co/bgr9L1Qc/Untitled-design.jpg" alt="JPUELLES Avatar" class="footer-avatar">
+        <div class="text-2xl font-black italic mb-2"><span class="text-white">JP</span><span class="text-red-600">UELLES</span></div>
+        <div class="graffiti-font text-sm mb-8"><span class="text-white">Shut up,</span> <span class="text-red-600">I’m working on my dreams</span></div>
+        
+        <div class="flex justify-center space-x-8 mb-8">
+            <a href="https://www.instagram.com/jpuelles.wnbf?igsh=M3dwdndoMzIzMHg1&utm_source=qr" target="_blank" class="text-gray-500 hover:text-white transition"><i class="fab fa-instagram fa-lg"></i></a>
+            <a href="https://www.tiktok.com/@jpuelles.wnbf?_r=1&_t=ZN-96Dkhfmz5Lr" target="_blank" class="text-gray-500 hover:text-white transition"><i class="fab fa-tiktok fa-lg"></i></a>
+            <a href="https://wa.me/34618207730?text=Hola,%20cu%C3%A9ntame%20mas%20sobre%20JPuelles%20TEAM" target="_blank" class="text-gray-500 hover:text-white transition"><i class="fab fa-whatsapp fa-lg"></i></a>
+        </div>
+        
+        <div class="flex flex-col md:flex-row justify-center items-center gap-4 mb-4 text-[10px] text-gray-600 uppercase tracking-widest font-bold">
+            <a href="avisolegal.html" class="hover:text-white transition">Aviso Legal</a>
+            <a href="politicaprivacidad.html" class="hover:text-white transition">Política de Privacidad</a>
+            <a href="politicacookies.html" class="hover:text-white transition">Política de cookies</a>
+        </div>
+        <p class="text-[10px] text-gray-600 uppercase tracking-widest font-bold mt-1">© 2026 JPUELLES TEAM | NATURAL MEN'S PHYSIQUE WNBF</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('active'); });
+    </script>
+</body>
+</html>
