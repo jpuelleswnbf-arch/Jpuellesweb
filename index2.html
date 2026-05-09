@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JPUELLES | Construye tu Físico - Culturismo Natural WNBF</title>
+    <meta name="description" content="Especialista en Culturismo Natural WNBF. Gana músculo y pierde grasa con nutrición flexible y entrenamiento basado en evidencia. Únete al JPUELLES TEAM.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="icon" type="image/png" href="LOGO JPUELLES.png">
+    <style>
+        :root {
+            --jp-red: #ff0000;
+            --jp-black: #0a0a0a;
+            --jp-white: #ffffff;
+            --jp-gray: #f4f4f5;
+        }
+
+        html, body {
+            max-width: 100%;
+            overflow-x: hidden; /* Evita desbordamiento lateral en cualquier dispositivo */
+        }
+
+        body {
+            background-color: var(--jp-white);
+            color: var(--jp-black);
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .heading-black {
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -0.05em;
+        }
+
+        /* Estilo específico para la portada de impacto */
+        .portada-titulo {
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -0.07em;
+            word-spacing: 0.15em; /* AUMENTO DE ESPACIO ENTRE PALABRAS */
+            line-height: 0.85;
+            color: var(--jp-red) !important; /* FORZAMOS ROJO */
+            font-style: italic;
+            position: relative;
+            z-index: 20;
+        }
+
+        .graffiti-font {
+            font-family: 'Permanent Marker', cursive;
+        }
+
+        .btn-primary {
+            background-color: var(--jp-red);
+            color: white;
+            transition: all 0.3s ease;
+            font-weight: 900;
+            text-transform: uppercase;
+            border: 2px solid var(--jp-red);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--jp-black);
+            border-color: var(--jp-black);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--jp-black);
+            color: var(--jp-black);
+            transition: all 0.3s ease;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+
+        .btn-outline:hover {
+            background: var(--jp-black);
+            color: white;
+        }
+
+        .nav-link {
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--jp-red);
+            transition: width 0.3s;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .section-white { background-color: var(--jp-white); }
+        .section-gray { background-color: var(--jp-gray); }
+        .section-dark { background-color: var(--jp-black); color: white; }
+
+        .image-container {
+            overflow: hidden;
+            border-bottom: 8px solid var(--jp-red);
+        }
+
+        .image-container img {
+            transition: transform 0.5s ease;
+        }
+
+        .image-container:hover img {
+            transform: scale(1.05);
+        }
+
+        .footer-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--jp-red);
+            margin: 0 auto 1.5rem;
+        }
+
+        #mobile-menu {
+            display: none;
+        }
+
+        #mobile-menu.active {
+            display: flex;
+        }
+
+        /* Hero Portada Background */
+        .hero-portada {
+            position: relative;
+            min-height: 100vh;
+        }
+
+        .hero-bg-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* AUMENTADA LA OPACIDAD DE 0.3 a 0.5 PARA HACERLA MÁS OSCURA */
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                              url('GYM OLD SCHOOL.jpg');
+            background-size: cover;
+            background-position: center;
+            filter: grayscale(100%); /* Solo afecta a la imagen de fondo */
+            z-index: 1;
+        }
+
+        .hero-content-wrapper {
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Animación sutil para el botón */
+        @keyframes pulse-red {
+            0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(255, 255, 255, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+        }
+        .animate-pulse-custom {
+            animation: pulse-red 2s infinite;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- MENÚ SUPERIOR -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-zinc-200">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="text-2xl font-black italic tracking-tighter uppercase">
+                <span class="text-red-600">JP</span><span class="text-black">UELLES</span>
+            </a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex gap-8 text-xs font-black uppercase tracking-widest items-center">
+                <a href="index.html" class="nav-link text-red-600">Home</a>
+                <a href="servicios.html" class="nav-link">Servicios</a>
+                <a href="team.html" class="nav-link">Team</a>
+                <a href="contacto.html" class="nav-link">Contacto</a>
+                <a href="empiezagratis.html" class="px-4 py-2 bg-red-600 text-white hover:bg-black transition">Empieza Gratis</a>
+                <img src="LOGO JPUELLES.png" alt="Logo JPUELLES" class="h-8 w-auto logo-img">
+            </div>
+
+            <!-- Mobile Toggle -->
+            <button class="md:hidden" id="menu-btn">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu List -->
+        <div id="mobile-menu" class="flex-col bg-white border-b border-zinc-200 p-6 gap-4 md:hidden font-bold uppercase text-sm">
+            <a href="index.html">Home</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="team.html">Team</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="empiezagratis.html" class="px-4 py-2 bg-red-600 text-white hover:bg-black transition text-center mt-2">Empieza Gratis</a>
+            <img src="LOGO JPUELLES.png" alt="Logo JPUELLES" class="h-12 w-auto mx-auto mt-4 logo-img">
+        </div>
+    </nav>
+
+    <!-- NUEVA PORTADA DE IMPACTO -->
+    <section class="relative min-h-screen flex items-center hero-portada pt-20 overflow-hidden">
+        <!-- Capa de fondo separada para mantener el filtro BN sin afectar al texto -->
+        <div class="hero-bg-image"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 w-full text-left hero-content-wrapper">
+            <div class="max-w-6xl">
+                <h1 class="text-6xl md:text-8xl lg:text-[110px] portada-titulo mb-4">
+                    TE HAN MENTIDO CON LAS RUTINAS CLASICAS
+                </h1>
+                
+                <h2 class="text-3xl md:text-5xl font-black text-white uppercase mb-8">
+                    ¿NO PROGRESAS?
+                </h2>
+
+                <div class="flex flex-col md:flex-row items-start md:items-center gap-6">
+                    <!-- ENLACE MODIFICADO -->
+                    <a href="https://jpuellesweb.vercel.app/servicios" class="bg-white text-black px-10 py-5 font-black uppercase text-xl hover:bg-red-600 hover:text-white transition-all duration-300 shadow-2xl animate-pulse-custom">
+                        DESCUBRE EL POR QUE
+                    </a>
+                    <p class="text-white text-xl md:text-2xl font-bold max-w-xl leading-tight opacity-95">
+                        Si Arnold no entrenaba como un atleta natural, ¿Por qué tú entrenas como él?
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Flecha decorativa hacia abajo -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
+            <a href="#original-hero" class="text-white opacity-50"><i data-lucide="chevron-down" size="48"></i></a>
+        </div>
+    </section>
+
+    <!-- SECCIÓN ANTERIOR (AHORA SEGUNDA SECCIÓN) -->
+    <header id="original-hero" class="relative min-h-screen flex items-center pt-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div class="z-10">
+                <h2 class="text-6xl md:text-8xl heading-black leading-none mb-6">
+                    CONSTRUYE <br> <span class="text-red-600">TU FÍSICO</span>
+                </h2>
+                <p class="text-xl md:text-2xl text-zinc-600 mb-10 font-medium">
+                    Gana músculo, pierde grasa. <br>
+                    <span class="text-zinc-400">Ciencia aplicada al culturismo natural.</span>
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#contacto" class="btn-primary px-8 py-4">Unirme al Team</a>
+                    <a href="guiagratuita.html" class="btn-outline px-8 py-4">Guía Gratis</a>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="absolute -top-10 -right-10 w-64 h-64 bg-red-50 rounded-full z-0"></div>
+                <div class="image-container relative z-10 shadow-2xl">
+                    <img src="ATHLETE-1.PNG" alt="Culturista entrenando" class="w-full grayscale hover:grayscale-0">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ATLETA NATURAL WNBF -->
+    <section class="py-16 section-white text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-4xl md:text-6xl heading-black mb-10 text-black">
+                ATLETA NATURAL <span class="text-red-600">WNBF</span>
+            </h2>
+            <img src="WNBF-Spain.png" alt="WNBF Spain" class="mx-auto max-w-full h-auto object-contain" style="max-height: 250px;" onerror="this.src='https://placehold.co/400x200/black/red?text=WNBF+SPAIN'">
+        </div>
+    </section>
+
+    <!-- SECCIONES DE VALOR -->
+    <section id="servicios" class="py-24 section-white">
+        <!-- Sección 1 -->
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-20 items-center mb-32">
+            <div class="image-container">
+                <img src="COMIDA SALUDABLE.PNG" alt="Nutrición Flexible">
+            </div>
+            <div>
+                <h2 class="text-4xl md:text-5xl heading-black mb-8 leading-tight">Experto en pérdida de grasa <br><span class="text-red-600">con nutrición flexible</span></h2>
+                <div class="space-y-6 text-zinc-600 text-lg leading-relaxed">
+                    <p>La pérdida de grasa no tiene por qué ser un calvario de restricciones insostenibles. Mi metodología se basa en la <strong>Nutrición Flexible</strong>, un sistema donde los datos mandan pero tus preferencias cuentan.</p>
+                    <p>Aprenderás a integrar los alimentos que te gustan mientras garantizamos el déficit calórico necesario y el aporte óptimo de proteína para preservar tu masa muscular. No es una dieta temporal, es un aprendizaje metabólico para toda la vida.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección 2 -->
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-20 items-center mb-32">
+            <div class="md:order-2 image-container">
+                <img src="PONTE FUERTE.PNG" alt="Entrenamiento de Fuerza">
+            </div>
+            <div class="md:order-1 text-right md:text-left">
+                <h2 class="text-4xl md:text-5xl heading-black mb-8 leading-tight">Ponte fuerte <br><span class="text-red-600">sin perder el tiempo</span></h2>
+                <div class="space-y-6 text-zinc-600 text-lg leading-relaxed">
+                    <p>El gimnasio es una herramienta, no tu segunda casa. Optimizamos cada serie y cada repetición mediante la <strong>Sobrecarga Progresiva</strong> y la selección de ejercicios biomecánicamente eficientes.</p>
+                    <p>Mi objetivo es que cada minuto que pases bajo la barra tenga un retorno directo en hipertrofia y fuerza. Menos volumen basura, más intensidad real. Resultados de élite para gente con agendas reales.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección 3 -->
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
+            <div class="image-container">
+                <img src="FISICO DESEADO.PNG" alt="Transformación Física">
+            </div>
+            <div>
+                <h2 class="text-4xl md:text-5xl heading-black mb-8 leading-tight">Consigue el físico que quieres <br><span class="text-red-600">ALCANZA TU MEJOR VERSION</span></h2>
+                <div class="space-y-6 text-zinc-600 text-lg leading-relaxed">
+                    <p>Un físico estético y funcional es el pilar de una vida de éxito. No solo transformamos tu espejo; transformamos tu confianza, tu disciplina y tu salud a largo plazo.</p>
+                    <p>A través de un seguimiento exhaustivo y ajustes semanales, te llevaré de la mano hasta alcanzar ese punto que siempre creíste imposible. El compromiso es mutuo: yo pongo el mapa, tú pones la voluntad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRESENTACIÓN JPUELLES TEAM -->
+    <section id="team" class="py-32 section-dark">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-5xl md:text-7xl heading-black mb-8 italic text-white">Esto es <span class="text-red-600">JPUELLES TEAM</span></h2>
+            <div class="inline-block px-4 py-2 bg-red-600 text-white font-black uppercase text-sm mb-8">
+                Culturista Natural WNBF | Competidor Men's Physique
+            </div>
+            <p class="text-xl text-zinc-300 leading-relaxed mb-10 max-w-4xl mx-auto italic">
+                Mi nombre es Jorge Puelles y mi objetivo es dar vision al culturismo natural, dar importancia a la salud y lanzar el mensaje de que cuando el trabajo es innegociable, los resultados llegan siempre. Represento la modalidad competitiva de la WNBF llevando al extremo mi pasion del culturismo natural. Bajo la estética de la categoria Men's Physique con una premisa innegociable: ESFUERZO Y DISCIPLINA, LA CIENCIA ES NUESTRA MEJOR ALIADA. En este equipo no vendemos humo ni atajos mágicos; vendemos resultados forjados en el estudio y el trabajo duro.
+            </p>
+            <div class="text-5xl text-white font-black mb-12 uppercase italic">J. Puelles</div>
+            
+            <!-- FOTOS MODIFICADAS (B/N, Hover Color, Ajuste Top 3ra Foto) -->
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="image-container h-[500px]">
+                    <img src="JORGE PUELLES.PNG" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-500" alt="Atleta JPUELLES 1">
+                </div>
+                <div class="image-container h-[500px]">
+                    <img src="JORGE PUELLES 2.PNG" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-500" alt="Atleta JPUELLES 2">
+                </div>
+                <div class="image-container h-[500px]">
+                    <img src="medalla wnbf.PNG" class="w-full h-full object-cover object-top grayscale hover:grayscale-0 transition duration-500" alt="Atleta JPUELLES 3">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CULTURISMO NATURAL Y VALORES -->
+    <section class="py-24 section-white">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-4xl md:text-5xl heading-black mb-8">NUESTRO CAMINO: <br><span class="text-red-600">ÉTICA Y HIERRO</span></h2>
+                <div class="space-y-6 text-zinc-600 text-lg">
+                    <p>El culturismo natural no es solo un deporte; es una forma de vida. Nos oponemos frontalmente al uso de sustancias dopantes que desvirtúan el mérito y ponen en riesgo la salud.</p>
+                    <p>Creemos en el potencial ilimitado del cuerpo humano cuando se le somete a un estímulo correcto y una nutrición de precisión. Nuestro equipo es un refugio para aquellos atletas que quieren estar orgullosos de su progreso sin recurrir a agujas ni mentiras.</p>
+                </div>
+                <div class="mt-12 flex gap-8">
+                    <div class="text-center">
+                        <div class="text-4xl heading-black text-red-600">100%</div>
+                        <div class="text-xs font-bold uppercase tracking-widest">Natural</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl heading-black text-red-600">WNBF</div>
+                        <div class="text-xs font-bold uppercase tracking-widest">Standard</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl heading-black text-red-600">ZERO</div>
+                        <div class="text-xs font-bold uppercase tracking-widest">Drogas</div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <img src="VOLUMEN.PNG" alt="Atleta Natural 1" class="rounded grayscale hover:grayscale-0 transition">
+                <img src="ESPALDAS.PNG" alt="Atleta Natural 2" class="rounded mt-8 grayscale hover:grayscale-0 transition">
+            </div>
+        </div>
+    </section>
+
+    <!-- RESULTADOS Y RESEÑAS - FONDO NEGRO -->
+    <section class="py-24 section-dark">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-5xl heading-black mb-16 underline decoration-red-600 underline-offset-8">RESULTADOS REALES</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Reseña 1 -->
+                <div class="bg-zinc-900 p-8 border-b-4 border-red-600 shadow-sm text-left">
+                    <div class="flex text-red-600 mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-zinc-300 italic mb-6">"El cambio no solo fue físico, fue mental. La nutrición flexible me permitió salir a cenar y seguir perdiendo grasa. ¡Increíble! 💪🔥"</p>
+                    <div class="font-black uppercase tracking-widest text-sm text-white">- Marc S. (Pérdida de 15kg)</div>
+                </div>
+                <!-- Reseña 2 -->
+                <div class="bg-zinc-900 p-8 border-b-4 border-red-600 shadow-sm text-left">
+                    <div class="flex text-red-600 mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-zinc-300 italic mb-6">"Entrenar con JPUELLES es otro nivel de intensidad. He ganado más músculo en 4 meses que en los últimos 2 años solo. 🏆"</p>
+                    <div class="font-black uppercase tracking-widest text-sm text-white">- Ivan R. (Fase de Volumen)</div>
+                </div>
+                <!-- Reseña 3 -->
+                <div class="bg-zinc-900 p-8 border-b-4 border-red-600 shadow-sm text-left">
+                    <div class="flex text-red-600 mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-zinc-300 italic mb-6">"Transparencia total. No te miente, te dice lo que necesitas oír para progresar. La mejor inversión en mi salud. 💎✨"</p>
+                    <div class="font-black uppercase tracking-widest text-sm text-white">- Carlos M. (Recomposición)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMULARIO DE CONTACTO CON BACKEND INTEGRADO -->
+    <section id="contacto" class="py-24 section-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl heading-black mb-4 uppercase">¿QUIERES <span class="text-red-600">RESULTADOS</span>?</h2>
+                <p class="text-zinc-500 font-bold uppercase tracking-widest">Rellena el formulario y evaluaré tu caso personalmente.</p>
+            </div>
+            
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) { document.getElementById('success-modal').classList.remove('hidden'); setTimeout(() => document.getElementById('success-modal').classList.remove('opacity-0'), 10); document.getElementById('contacto-form').reset(); submitted = false; }"></iframe>
+            <form id="contacto-form" action="https://docs.google.com/forms/d/e/1FAIpQLSea7RLD451d_jV6d09Ud98l39-CyLbhkD-DfM6NstAU1igkwA/formResponse" method="POST" target="hidden_iframe" class="space-y-8 bg-zinc-50 p-8 md:p-12 border border-zinc-200 shadow-xl" onsubmit="return validateForm()">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <label class="block text-xs font-black uppercase mb-2">Nombre</label>
+                        <input type="text" name="entry.81777955" id="form-nombre" class="w-full border-b-2 border-zinc-300 bg-transparent py-3 outline-none focus:border-red-600 transition" placeholder="Tu nombre..." required>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-black uppercase mb-2">WhatsApp / Email</label>
+                        <input type="text" name="entry.1238646382" id="form-contacto" class="w-full border-b-2 border-zinc-300 bg-transparent py-3 outline-none focus:border-red-600 transition" placeholder="Para contactarte..." required>
+                        <p id="contacto-error" class="text-red-600 text-xs mt-1 hidden font-bold">Por favor, introduce un email o número de teléfono válido.</p>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs font-black uppercase mb-2">Tu mayor frustración actual</label>
+                    <textarea name="entry.555950925" id="form-frustracion" class="w-full border-b-2 border-zinc-300 bg-transparent py-3 outline-none focus:border-red-600 transition" rows="4" placeholder="¿Qué te impide progresar?" required></textarea>
+                </div>
+                <div class="flex items-start gap-2">
+                    <input type="checkbox" id="privacy-check" required class="mt-1 cursor-pointer accent-red-600">
+                    <label for="privacy-check" class="text-[10px] text-zinc-500 font-bold cursor-pointer leading-tight">Los datos recogidos en el formulario son unicamente para contactar con el cliente sobre los servicios interesados</label>
+                </div>
+                <button type="submit" class="btn-primary w-full py-6 text-xl">ENVIAR SOLICITUD DE ASESORÍA</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Sección Motivacional con Fondo Rojo -->
+    <section class="py-16 bg-red-600 text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-3xl md:text-5xl font-black italic uppercase tracking-tighter leading-tight text-black">
+                TRABAJA EN SILENCIO,<br>
+                DEJA QUE TUS RESULTADOS HABLEN.
+            </h2>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 bg-zinc-950 border-t border-white/5 text-center px-6 text-white">
+        <img src="https://i.ibb.co/bgr9L1Qc/Untitled-design.jpg" alt="JPUELLES Avatar" class="footer-avatar">
+        <div class="text-2xl font-black italic mb-2">
+            <span class="text-white">JP</span><span class="text-red-600">UELLES</span>
+        </div>
+        <div class="graffiti-font text-sm mb-8">
+            <span class="text-white">Shut up,</span> <span class="text-red-600">I’m working on my dreams</span>
+        </div>
+        <div class="flex justify-center space-x-8 mb-8">
+            <a href="https://www.instagram.com/jpuelles.wnbf?igsh=M3dwdndoMzIzMHg1&utm_source=qr" target="_blank" class="text-gray-500 hover:text-white transition"><i class="fab fa-instagram fa-lg"></i></a>
+            <a href="https://www.tiktok.com/@jpuelles.wnbf?_r=1&_t=ZN-96Dkhfmz5Lr" target="_blank" class="text-gray-500 hover:text-white transition"><i class="fab fa-tiktok fa-lg"></i></a>
+            <a href="https://wa.me/34618207730?text=Hola,%20cu%C3%A9ntame%20mas%20sobre%20JPuelles%20TEAM" target="_blank" class="text-gray-500 hover:text-white transition"><i class="fab fa-whatsapp fa-lg"></i></a>
+        </div>
+        
+        <div class="flex flex-col md:flex-row justify-center items-center gap-4 mb-4 text-[10px] text-gray-600 uppercase tracking-widest font-bold">
+            <a href="#" class="hover:text-white transition">Aviso Legal</a>
+            <a href="#" class="hover:text-white transition">Política de Privacidad</a>
+            <a href="#" class="hover:text-white transition">Política de cookies</a>
+        </div>
+        <p class="text-[10px] text-gray-600 uppercase tracking-widest font-bold mt-1">
+            © 2026 JPUELLES TEAM | NATURAL MEN'S PHYSIQUE WNBF
+        </p>
+    </footer>
+
+    <!-- HTML DEL MODAL DE GALERÍA -->
+    <div id="gallery-modal" class="fixed inset-0 z-[100] hidden bg-black/95 flex items-center justify-center opacity-0 transition-opacity duration-300">
+        <button id="gallery-close" class="absolute top-6 right-6 text-white hover:text-red-600 transition z-50">
+            <i data-lucide="x" class="w-10 h-10"></i>
+        </button>
+        <button id="gallery-prev" class="absolute left-4 md:left-10 text-white hover:text-red-600 transition z-50">
+            <i data-lucide="chevron-left" class="w-12 h-12"></i>
+        </button>
+        <img id="gallery-img" src="" alt="Gallery Image" class="max-w-[90%] max-h-[90vh] object-contain shadow-2xl">
+        <button id="gallery-next" class="absolute right-4 md:right-10 text-white hover:text-red-600 transition z-50">
+            <i data-lucide="chevron-right" class="w-12 h-12"></i>
+        </button>
+    </div>
+
+    <!-- HTML DEL MODAL DE ÉXITO (FORMULARIO) -->
+    <div id="success-modal" class="fixed inset-0 z-[110] hidden bg-black/90 flex items-center justify-center opacity-0 transition-opacity duration-300">
+        <div class="bg-white p-8 md:p-12 text-center relative max-w-md w-[90%] border-t-4 border-red-600 shadow-2xl">
+            <button onclick="closeSuccessModal()" class="absolute top-4 right-4 text-zinc-400 hover:text-red-600 transition">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+            <div class="w-16 h-16 bg-red-600 text-white flex items-center justify-center rounded-full mx-auto mb-6">
+                <i data-lucide="check" class="w-8 h-8"></i>
+            </div>
+            <h3 class="text-3xl font-black uppercase tracking-[-0.05em] mb-4">¡RECIBIDO!</h3>
+            <p class="text-zinc-600 font-medium text-lg">En breve me pondré en contacto contigo.</p>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+
+        // Mobile Menu logic
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    mobileMenu.classList.remove('active');
+                    return;
+                }
+                const target = document.querySelector(targetId);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                    mobileMenu.classList.remove('active');
+                }
+            });
+        });
+
+        // LÓGICA DE GALERÍA DE IMÁGENES
+        const modal = document.getElementById('gallery-modal');
+        const modalImg = document.getElementById('gallery-img');
+        const closeBtn = document.getElementById('gallery-close');
+        const prevBtn = document.getElementById('gallery-prev');
+        const nextBtn = document.getElementById('gallery-next');
+        
+        // Seleccionamos todas las imágenes de la página (el hero usa background-image por lo que no se selecciona)
+        // EXCLUIMOS la foto del footer y el logo
+        const galleryImages = Array.from(document.querySelectorAll('img:not(.footer-avatar):not(.logo-img)'));
+        let currentIndex = 0;
+
+        // Convertirlas en botones clickeables
+        galleryImages.forEach((img, index) => {
+            img.style.cursor = 'pointer';
+            img.addEventListener('click', () => {
+                currentIndex = index;
+                showImage(currentIndex);
+                modal.classList.remove('hidden');
+                // Timeout para aplicar la transición suave de opacidad
+                setTimeout(() => modal.classList.remove('opacity-0'), 10);
+            });
+        });
+
+        function showImage(index) {
+            // Se mostrará a color natural porque el id="gallery-img" no tiene clases de escala de grises
+            modalImg.src = galleryImages[index].src;
+        }
+
+        closeBtn.addEventListener('click', closeGalleryModal);
+        modal.addEventListener('click', (e) => {
+            // Cerrar solo si se clickea el fondo negro, no la imagen ni los botones
+            if (e.target === modal) closeGalleryModal();
+        });
+
+        function closeGalleryModal() {
+            modal.classList.add('opacity-0');
+            setTimeout(() => modal.classList.add('hidden'), 300);
+        }
+
+        prevBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : galleryImages.length - 1;
+            showImage(currentIndex);
+        });
+
+        nextBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            currentIndex = (currentIndex < galleryImages.length - 1) ? currentIndex + 1 : 0;
+            showImage(currentIndex);
+        });
+
+        // Control por teclado para la galería
+        document.addEventListener('keydown', (e) => {
+            if (!modal.classList.contains('hidden')) {
+                if (e.key === 'Escape') closeGalleryModal();
+                if (e.key === 'ArrowLeft') prevBtn.click();
+                if (e.key === 'ArrowRight') nextBtn.click();
+            }
+        });
+
+        // LÓGICA DE FORMULARIO DE GOOGLE
+        let submitted = false;
+        
+        function validateForm() {
+            const contactInput = document.getElementById('form-contacto').value.trim();
+            const errorMsg = document.getElementById('contacto-error');
+            
+            // Regex básico para Email y Teléfono
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$|^[0-9\+\s\-]{7,15}$/;
+
+            if (!emailRegex.test(contactInput) && !phoneRegex.test(contactInput)) {
+                errorMsg.classList.remove('hidden');
+                return false;
+            }
+            
+            errorMsg.classList.add('hidden');
+            submitted = true;
+            return true;
+        }
+
+        function closeSuccessModal() {
+            const successModal = document.getElementById('success-modal');
+            successModal.classList.add('opacity-0');
+            setTimeout(() => successModal.classList.add('hidden'), 300);
+        }
+    </script>
+</body>
+</html>
