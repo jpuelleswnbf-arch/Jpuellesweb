@@ -151,6 +151,7 @@
                 <img src="LOGO JPUELLES.png" alt="Logo JPUELLES" class="h-8 w-auto">
             </div>
 
+            <!-- Mobile Toggle -->
             <button class="md:hidden" id="menu-btn" aria-label="Abrir menú">
                 <i data-lucide="menu"></i>
             </button>
@@ -160,7 +161,7 @@
             <a href="index.html">Home</a>
             <a href="servicios.html">Servicios</a>
             <a href="team.html">Team</a>
-            <a href="contacto.html" class="text-red-600">Contacto</a>
+            <a href="contacto.html">Contacto</a>
             <!-- BOTÓN RESPONSIVE MEJORADO -->
             <a href="empiezagratis.html" class="px-4 py-2 bg-red-600 text-white font-black uppercase text-center rounded-sm">Empieza Gratis</a>
             <!-- LOGO DEBAJO Y CENTRADO -->
@@ -169,32 +170,33 @@
     </nav>
 
     <main class="pt-20">
-        <header class="py-24 md:py-32 bg-black text-white text-center relative overflow-hidden">
+        <header class="py-20 md:py-32 bg-black text-white text-center relative overflow-hidden">
             <div class="absolute top-0 left-0 w-full h-full opacity-20 grayscale">
                 <img src="JORGE PUELLES 3.PNG" class="w-full h-full object-cover" style="object-position: 50% 20%;">
             </div>
             <div class="max-w-7xl mx-auto px-6 relative z-10">
-                <h1 class="text-6xl md:text-8xl heading-black italic mb-6">
+                <h1 class="text-4xl sm:text-6xl md:text-8xl heading-black italic mb-6 leading-none">
                     HABLEMOS DE <br><span class="text-red-600">TU CAMBIO</span>
                 </h1>
-                <p class="text-xl md:text-2xl font-bold max-w-2xl mx-auto text-zinc-300 italic">
+                <p class="text-lg md:text-2xl font-bold max-w-2xl mx-auto text-zinc-300 italic">
                     No pierdas más el tiempo con rutinas genéricas. Empieza hoy tu camino hacia la élite natural.
                 </p>
             </div>
         </header>
 
-        <section class="py-24 bg-white">
+        <section class="py-16 md:py-24 bg-white">
             <div class="max-w-7xl mx-auto px-6">
-                <div class="grid lg:grid-cols-2 gap-20">
+                <!-- GRID RESPONSIVE MEJORADO -->
+                <div class="grid lg:grid-cols-2 gap-12 lg:gap-20">
                     
                     <div>
-                        <div class="mb-12">
-                            <h2 class="text-4xl heading-black mb-4">SOLICITUD DE <span class="text-red-600">ASESORÍA</span></h2>
+                        <div class="mb-12 text-center lg:text-left">
+                            <h2 class="text-3xl md:text-4xl heading-black mb-4">SOLICITUD DE <span class="text-red-600">ASESORÍA</span></h2>
                             <p class="text-zinc-500 font-bold uppercase tracking-widest text-sm">Evaluaremos tu caso y te contactaremos en menos de 24h</p>
                         </div>
                         
-                        <form action="#" method="POST" class="space-y-8 bg-zinc-50 p-8 md:p-12 border border-zinc-200 shadow-2xl">
-                            <div class="grid md:grid-cols-2 gap-8">
+                        <form action="#" method="POST" class="space-y-6 md:space-y-8 bg-zinc-50 p-6 md:p-12 border border-zinc-200 shadow-2xl">
+                            <div class="grid md:grid-cols-2 gap-6 md:gap-8">
                                 <div>
                                     <label class="block text-xs font-black uppercase mb-2">Nombre Completo</label>
                                     <input type="text" required class="w-full border-b-2 border-zinc-300 bg-transparent py-3 outline-none focus:border-red-600 transition font-medium" placeholder="Ej: Juan Pérez">
@@ -226,45 +228,46 @@
                                 <textarea required class="w-full border-b-2 border-zinc-300 bg-transparent py-3 outline-none focus:border-red-600 transition font-medium" rows="4" placeholder="¿Cuánto tiempo llevas entrenando? ¿Cuál es tu mayor reto?"></textarea>
                             </div>
                             
-                            <button type="submit" class="bg-red-600 text-white w-full py-6 text-xl font-black uppercase border-2 border-red-600 hover:bg-black hover:border-black transition-all shadow-lg">
+                            <button type="submit" class="bg-red-600 text-white w-full py-5 md:py-6 text-lg md:text-xl font-black uppercase border-2 border-red-600 hover:bg-black hover:border-black transition-all shadow-lg">
                                 ENVIAR SOLICITUD AHORA
                             </button>
                         </form>
                     </div>
 
                     <div class="flex flex-col justify-center">
-                        <div class="space-y-12">
+                        <!-- SIDEBAR RESPONSIVE -->
+                        <div class="space-y-12 flex flex-col items-center lg:items-start text-center lg:text-left">
                             
-                            <div>
+                            <div class="w-full flex flex-col items-center lg:items-start">
                                 <!-- LOGO SOBRE CANALES DIRECTOS -->
-                                <img src="LOGO JPUELLES.png" alt="Logo JPUELLES" class="h-24 w-auto mb-6">
-                                <h3 class="text-2xl heading-black mb-6 border-l-4 border-red-600 pl-4">CANALES DIRECTOS</h3>
-                                <div class="space-y-6">
+                                <img src="LOGO JPUELLES.png" alt="Logo JPUELLES" class="h-20 md:h-24 w-auto mb-6 mx-auto lg:mx-0">
+                                <h3 class="text-2xl heading-black mb-6 border-l-4 border-red-600 pl-4 w-fit">CANALES DIRECTOS</h3>
+                                <div class="space-y-6 w-full">
                                     <!-- WHATSAPP ACTUALIZADO -->
-                                    <a href="https://wa.me/34618207730?text=Hola,%20cu%C3%A9ntame%20mas%20sobre%20JPuelles%20TEAM" target="_blank" rel="noopener noreferrer" class="flex items-center gap-6 group cursor-pointer block">
-                                        <div class="w-12 h-12 bg-red-600 text-white flex items-center justify-center rounded-sm group-hover:bg-black transition-colors">
+                                    <a href="https://wa.me/34618207730?text=Hola,%20cu%C3%A9ntame%20mas%20sobre%20JPuelles%20TEAM" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center lg:justify-start gap-6 group cursor-pointer block">
+                                        <div class="w-12 h-12 bg-red-600 text-white flex items-center justify-center rounded-sm group-hover:bg-black transition-colors shrink-0">
                                             <i data-lucide="message-circle" class="w-6 h-6"></i>
                                         </div>
                                         <div>
                                             <p class="text-xs font-black uppercase text-zinc-400">WhatsApp Team</p>
-                                            <p class="text-xl font-black uppercase text-black">+34 618 207 730</p>
+                                            <p class="text-lg md:text-xl font-black uppercase text-black">+34 618 207 730</p>
                                         </div>
                                     </a>
                                     <!-- EMAIL ACTUALIZADO -->
-                                    <a href="mailto:Jpuelles.wnbf@gmail.com" class="flex items-center gap-6 group cursor-pointer block">
-                                        <div class="w-12 h-12 bg-red-600 text-white flex items-center justify-center rounded-sm group-hover:bg-black transition-colors">
+                                    <a href="mailto:Jpuelles.wnbf@gmail.com" class="flex items-center justify-center lg:justify-start gap-6 group cursor-pointer block">
+                                        <div class="w-12 h-12 bg-red-600 text-white flex items-center justify-center rounded-sm group-hover:bg-black transition-colors shrink-0">
                                             <i data-lucide="mail" class="w-6 h-6"></i>
                                         </div>
-                                        <div>
+                                        <div class="break-all">
                                             <p class="text-xs font-black uppercase text-zinc-400">Email Soporte</p>
-                                            <p class="text-xl font-black uppercase text-black">Jpuelles.wnbf@gmail.com</p>
+                                            <p class="text-lg md:text-xl font-black uppercase text-black">Jpuelles.wnbf@gmail.com</p>
                                         </div>
                                     </a>
                                 </div>
                             </div>
                             
-                            <div>
-                                <h3 class="text-2xl heading-black mb-6 border-l-4 border-red-600 pl-4">SÍGUENOS EN RRSS</h3>
+                            <div class="w-full flex flex-col items-center lg:items-start">
+                                <h3 class="text-2xl heading-black mb-6 border-l-4 border-red-600 pl-4 w-fit">SÍGUENOS EN RRSS</h3>
                                 <div class="flex gap-4">
                                     <a href="https://www.instagram.com/jpuelles.wnbf?igsh=M3dwdndoMzIzMHg1&utm_source=qr" target="_blank" rel="noopener noreferrer" class="w-16 h-16 border-2 border-zinc-200 flex items-center justify-center text-black hover:bg-red-600 hover:border-red-600 hover:text-white transition-all" aria-label="Instagram">
                                         <i class="fab fa-instagram fa-2x"></i>
@@ -275,9 +278,9 @@
                                 </div>
                             </div>
                             
-                            <div class="bg-red-600 p-8 text-white shadow-xl">
+                            <div class="bg-red-600 p-6 md:p-8 text-white shadow-xl w-full">
                                 <h4 class="text-xl heading-black mb-4 italic">¿ERES DE MADRID?</h4>
-                                <p class="font-bold text-sm uppercase tracking-widest flex items-center gap-2 mb-2">
+                                <p class="font-bold text-sm uppercase tracking-widest flex items-center justify-center lg:justify-start gap-2 mb-2">
                                     <i data-lucide="map-pin" class="w-4 h-4"></i> Entrenamientos Presenciales
                                 </p>
                                 <p class="text-black font-black uppercase text-xs">
